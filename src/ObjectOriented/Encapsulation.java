@@ -10,7 +10,7 @@ public class Encapsulation {
 		
 		Tv myTv = new Tv();
 		
-		myTv.setScreenSize(20);
+		myTv.setScreenSize(101);
 		System.out.println(myTv.getScreenSize());
 		
 
@@ -71,6 +71,7 @@ class Tv {
 
 	private String name;
 
+	// This doesnt work, get an NullPointerException 
 	public void setScreenSize(int screenSize) {
 		ScreenSize t = new ScreenSize();
 		t.setSize(screenSize); 
@@ -85,7 +86,7 @@ class Tv {
 }
 
 class ScreenSize {
-	private int size = 0;
+	private int size;
 	
 	public int getSize() {
 		return size;
